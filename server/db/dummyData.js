@@ -21,8 +21,8 @@ let dummyData = [
     },
     {
         image:"https://images.unsplash.com/photo-1665493182364-aa6696973727?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=673&q=80",
-        title:'',
-        subTitle:""
+        title:'Test 2',
+        subTitle:"Test 2"
     },
     {
         image:"https://images.unsplash.com/photo-1664575600796-ffa828c5cb6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=800",
@@ -36,8 +36,8 @@ let dummyData = [
     },
     {
         image:"https://images.unsplash.com/photo-1665493182364-aa6696973727?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=673&q=80",
-        title:'',
-        subTitle:""
+        title:'Test3',
+        subTitle:"Test 3"
     },
     {
         image:"https://images.unsplash.com/photo-1665512983203-8421eae182b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80",
@@ -61,3 +61,6 @@ let dummyData = [
     }
 
 ]
+
+
+module.exports = dummyData
