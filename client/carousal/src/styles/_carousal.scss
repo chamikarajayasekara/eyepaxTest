@@ -3,17 +3,21 @@
   .carousal{
     display: flex;
     justify-content: center;
-    position: relative;
-
     .slider{
       display: flex;
       justify-content: center;
-      //width:80%;
-      //height:80%;
-      //position:absolute;
-      left:10%;
-      top:10%;
       overflow:hidden;
+      position: relative;
+      .previousState{
+        position:absolute;
+        top:50%;
+        left:5%;
+      }
+      .next{
+        position:absolute;
+        top:50%;
+        right:5%;
+      }
       .slide{
         background-color: #61dafb;
         img{
