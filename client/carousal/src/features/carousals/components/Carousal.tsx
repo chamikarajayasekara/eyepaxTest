@@ -37,8 +37,8 @@ const Carousal = (props:Props) => {
             let current ;
             console.log(carousals.length)
             console.log(activated)
-            if(activated < carousals.length){
-                current  = activated  +1
+            if(activated < carousals.length - 1){
+                current  = activated  + 1
                 setActivated( current )
             }
 
@@ -55,22 +55,16 @@ const Carousal = (props:Props) => {
                             {
                                 carousals && carousals.length > 0 ?
                                     carousals.map((item : any, key:number)=>
-                                        <Row>
-                                            <Col sm={12}>
                                                 <>
                                                     {
                                                         activated === key ?
-                                                            <div className="slide slide_1">
+                                                            <div className="slide">
                                                                 <img src={item.image} alt={item.title}/>
                                                             </div>
                                                             :
                                                             null
                                                     }
                                                 </>
-
-                                            </Col>
-                                        </Row>
-
 
                                     )
                                     : null
