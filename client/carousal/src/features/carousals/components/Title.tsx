@@ -4,7 +4,7 @@ interface Props{
 }
 const Title = (props:Props) => {
     return (
-        <div>
+        <div className="title-text">
             {props.title}
         </div>
     );

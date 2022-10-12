@@ -5,7 +5,7 @@ interface Props{
 }
 const SubTitle = (props:Props) => {
     return (
-        <div>
+        <div className="subTitle-text">
             {props.subTitle}
         </div>
     );

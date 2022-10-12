@@ -1,6 +1,6 @@
 .carousal{
   display: flex;
-justify-content: center;
+  justify-content: center;
 
 
   .slider{
@@ -12,6 +12,26 @@ justify-content: center;
     left:10%;
     top:10%;
     overflow:hidden;
+    .slide{
+      background-color: #61dafb;
+
+      .title-text{
+        font-size: 25px;
+        color: white;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+      }
+      .subTitle-text{
+        font-size: 15px;
+        color: white;
+        position:absolute;
+        top:60%;
+        left:50%;
+        transform:translate(-50%, -50%);
+      }
+    }
   }
   .prev{
     position:absolute;
@@ -27,14 +47,6 @@ justify-content: center;
   }
   .transition {
     transition:.5s linear;
-  }
-  .slide{
-
-  }
-  .slide p {
-    font-size:4em;
-    color:#fff;
-    font-weight:900;
   }
   .carousal-item{
     .content-image{

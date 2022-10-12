@@ -3,6 +3,8 @@ import {ICarousals} from "../../../models/ICarousals";
 import axios from "axios";
 import Container from 'react-bootstrap/Container';
 import {Col, Row} from "react-bootstrap";
+import Title from "./Title";
+import SubTitle from "./SubTitle";
 
 interface Props {
     slides:number,
@@ -60,6 +62,8 @@ const Carousal = (props:Props) => {
                                                         activated === key ?
                                                             <div className="slide">
                                                                 <img src={item.image} alt={item.title}/>
+                                                                <Title title={item.title}/>
+                                                                <SubTitle subTitle={item.subTitle}/>
                                                             </div>
                                                             :
                                                             null
