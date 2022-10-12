@@ -28,7 +28,10 @@ const Carousal = (props:Props) => {
 
 
     function handleActivated(type:string) {
-        console.log(carousals.length)
+
+
+
+
         if(type === "prev"){
             console.log(activated)
             if(activated !== 0 ){
@@ -37,11 +40,16 @@ const Carousal = (props:Props) => {
 
         }else if(type === "next"){
             let current ;
-            console.log(carousals.length)
-            console.log(activated)
+
             if(activated < carousals.length - 1){
                 current  = activated  + 1
                 setActivated( current )
+            }else{
+                if(props.infinite){
+                    if(carousals.length === activated + 1){
+                        setActivated(0)
+                    }
+                }
             }
 
         }
