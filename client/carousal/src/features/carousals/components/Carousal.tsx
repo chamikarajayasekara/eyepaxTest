@@ -69,10 +69,10 @@ const Carousal = (props:Props) => {
                                                             null
                                                     }
                                                     {
-                                                        carousals.length > 1 ? <button className="previousState" onClick={e => handleActivated('prev')}>prev</button> : null
+                                                        carousals.length > 1 ? <button className="previousState" onClick={e => handleActivated('prev')}>{"<"}</button> : null
                                                     }
                                                     {
-                                                        carousals.length > 1 ?   <button className="next"  onClick={e => handleActivated('next')}>next</button>: null
+                                                        carousals.length > 1 ?   <button className="next"  onClick={e => handleActivated('next')}>{">"}</button>: null
                                                     }
                                                 </>
 

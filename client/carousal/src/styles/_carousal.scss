@@ -1,4 +1,5 @@
 .row{
+  margin-top: 50px;
   margin-bottom: 50px;
   .carousal{
     display: flex;
@@ -19,13 +20,13 @@
         right:5%;
       }
       .slide{
-        background-color: #61dafb;
+
         img{
           width: 90vw;
           height: 80vh;
         }
         .title-text{
-          font-size: 25px;
+          font-size: 35px;
           color: white;
           position:absolute;
           top:50%;
@@ -33,7 +34,7 @@
           transform:translate(-50%, -50%);
         }
         .subTitle-text{
-          font-size: 15px;
+          font-size: 25px;
           color: white;
           position:absolute;
           top:60%;
@@ -46,14 +47,6 @@
 
     .transition {
       transition:.5s linear;
-    }
-    .carousal-item{
-      .content-image{
-        img{
-          width: 100px;
-          height:100px;
-        }
-      }
     }
   }
 
