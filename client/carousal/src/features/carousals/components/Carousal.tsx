@@ -23,21 +23,25 @@ const Carousal = (props:Props) => {
         })
     },[])
 
-    useEffect(() =>{
-        console.log(carousals)
-    },[carousals])
 
 
     function handleActivated(type:string) {
         console.log(carousals.length)
-        if(type === "previous"){
-            setActivated(activated)
+        if(type === "prev"){
+            console.log(activated)
+            if(activated !== 0 ){
+                setActivated(activated - 1)
+            }
+
         }else if(type === "next"){
             let current ;
+            console.log(carousals.length)
+            console.log(activated)
             if(activated < carousals.length){
                 current  = activated  +1
+                setActivated( current )
             }
-            setActivated( current )
+
         }
     }
     return (
