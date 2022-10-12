@@ -77,7 +77,7 @@ const Carousal = (props:Props) => {
 
                         </div>
                     </div>
-                    <button className="prev" onClick={e => handleActivated('prev')}>prev</button>
+                    <button className="previousState" onClick={e => handleActivated('prev')}>prev</button>
                     <button className="next"  onClick={e => handleActivated('next')}>next</button>
                 </Col>
             </Row>

@@ -1,59 +1,56 @@
-.carousal{
-  display: flex;
-  justify-content: center;
-
-
-  .slider{
+.row{
+  margin-bottom: 50px;
+  .carousal{
     display: flex;
     justify-content: center;
-    //width:80%;
-    //height:80%;
-    //position:absolute;
-    left:10%;
-    top:10%;
-    overflow:hidden;
-    .slide{
-      background-color: #61dafb;
+    position: relative;
 
-      .title-text{
-        font-size: 25px;
-        color: white;
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform:translate(-50%, -50%);
+    .slider{
+      display: flex;
+      justify-content: center;
+      //width:80%;
+      //height:80%;
+      //position:absolute;
+      left:10%;
+      top:10%;
+      overflow:hidden;
+      .slide{
+        background-color: #61dafb;
+        img{
+          width: 90vw;
+          height: 80vh;
+        }
+        .title-text{
+          font-size: 25px;
+          color: white;
+          position:absolute;
+          top:50%;
+          left:50%;
+          transform:translate(-50%, -50%);
+        }
+        .subTitle-text{
+          font-size: 15px;
+          color: white;
+          position:absolute;
+          top:60%;
+          left:50%;
+          transform:translate(-50%, -50%);
+        }
       }
-      .subTitle-text{
-        font-size: 15px;
-        color: white;
-        position:absolute;
-        top:60%;
-        left:50%;
-        transform:translate(-50%, -50%);
+    }
+
+
+    .transition {
+      transition:.5s linear;
+    }
+    .carousal-item{
+      .content-image{
+        img{
+          width: 100px;
+          height:100px;
+        }
       }
     }
   }
-  .prev{
-    position:absolute;
-    top:45%;
-    left:2.5%;
-    cursor:pointer;
-  }
-  .next{
-    position:absolute;
-    top:45%;
-    right:2.5%;
-    cursor:pointer;
-  }
-  .transition {
-    transition:.5s linear;
-  }
-  .carousal-item{
-    .content-image{
-      img{
-        width: 100px;
-        height:100px;
-      }
-    }
-  }
+
 }
