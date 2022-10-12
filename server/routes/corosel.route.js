@@ -1,7 +1,7 @@
 var express = require('express');
 const getCarousals = require("../services/carousel.service");
 var router = express.Router();
-const dummyData = require("../db/dummyData");
+const dummyData = require("../db/dummyData.json");
 
 router.get("/carousel", async (req,res) => {
     try{
@@ -12,7 +12,8 @@ router.get("/carousel", async (req,res) => {
         }else{
             length = 10;
         }
-        let result = await getCarousals(length, dummyData)
+        let result = await getCarousals(length, dummyData);
+        res.setHeader('Content-Type', 'application/json');
         res.send(result)
     }catch (e) {
         throw  new Error(e)
