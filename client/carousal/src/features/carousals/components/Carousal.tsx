@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react';
 import {ICarousals} from "../../../models/ICarousals";
 import axios from "axios";
+import Container from 'react-bootstrap/Container';
+import {Col, Row} from "react-bootstrap";
 
 interface Props {
     slides:number,
@@ -26,51 +28,61 @@ const Carousal = (props:Props) => {
     },[carousals])
 
 
-    function handleActivated(previous: any, current: any) {
-
+    function handleActivated(type:string) {
+        console.log(carousals.length)
+        if(type === "previous"){
+            setActivated(activated)
+        }else if(type === "next"){
+            let current ;
+            if(activated < carousals.length){
+                current  = activated  +1
+            }
+            setActivated( current )
+        }
     }
     return (
-        <div className="carousal">
-            {/*<div className="carousal-item">*/}
-            {/*    {*/}
-            {/*        carousals && carousals.length > 0 ?*/}
-            {/*            carousals.map((item : any)=>*/}
-            {/*                <>*/}
-            {/*                    <button>prev</button>*/}
-            {/*                    <button>next</button>*/}
-            {/*                    <div className="content-image">*/}
-            {/*                        <img src={item.image} alt={item.title}/>*/}
-            {/*                    </div>*/}
-            {/*                    <hr/>*/}
-            {/*                </>*/}
 
-            {/*            )*/}
-            {/*            : null*/}
-            {/*    }*/}
-            {/*</div>*/}
+        <Container fluid>
+            <Row>
+                <Col sm={12}>
+                    <div className="carousal">
+                        <div className="slider">
 
-            <div className="slider">
-                <div className="slide slide_1">
-                    <p> 1 </p>
-                </div>
-                <div className="slide slide_2">
-                    <p> 2 </p>
-                </div>
-                <div className="slide slide_3">
-                    <p> 3 </p>
-                </div>
-                <div className="slide slide_4">
-                    <p> 4 </p>
-                </div>
-                <div className="slide slide_5">
-                    <p> 5 </p>
-                </div>
+                            {
+                                carousals && carousals.length > 0 ?
+                                    carousals.map((item : any, key:number)=>
+                                        <Row>
+                                            <Col sm={12}>
+                                                <>
+                                                    {
+                                                        activated === key ?
+                                                            <div className="slide slide_1">
+                                                                <img src={item.image} alt={item.title}/>
+                                                            </div>
+                                                            :
+                                                            null
+                                                    }
+                                                </>
 
-            </div>
+                                            </Col>
+                                        </Row>
 
-            <div className="prev">prev</div>
-            <div className="next">next</div>
-        </div>
+
+                                    )
+                                    : null
+                            }
+
+
+                        </div>
+                    </div>
+                    <button className="prev" onClick={e => handleActivated('prev')}>prev</button>
+                    <button className="next"  onClick={e => handleActivated('next')}>next</button>
+                </Col>
+            </Row>
+        </Container>
+
+
+
     );
 };
 
